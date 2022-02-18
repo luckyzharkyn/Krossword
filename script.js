@@ -35,7 +35,7 @@ function Start() {
     header.style.display = "none";
     footer.style.display = "none";
     main.style.display = "flex";
-    img.src = "./1.jpg";
+    img.src = "./img/1.jpg";
 
     let main__form__question = document.querySelector(".main__form__question");
     question.innerHTML = `${count}. ` + questions[count];
@@ -48,7 +48,7 @@ check.addEventListener("click", function() {
         warning.innerHTML = "Ответ правильный";
         count++;
         correct_answer++;
-        img.src = `./${count}.jpg`;
+        img.src = `./img/${count}.jpg`;
         setTimeout(() => {
             EndTest();
             question.innerHTML = `${count}. ` + questions[count];
@@ -71,7 +71,7 @@ next.addEventListener("click", function() {
         count++;
         EndTest();
         incorrect_answer++;
-        img.src = `./${count}.jpg`;
+        img.src = `./img/${count}.jpg`;
         input.value = "";
         warning.innerHTML = " ";
         question.innerHTML = questions[count];
