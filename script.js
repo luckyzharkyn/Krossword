@@ -10,6 +10,9 @@ let footer = document.querySelector(".footer");
 let start = document.querySelector(".start");
 let start__again = document.querySelector(".start__again");
 
+let rightAnswer = document.querySelector(".rightAnswer");
+let incorrectAnswer = document.querySelector(".incorrectAnswer");
+
 let count = 1;
 let correct_answer = 0;
 let incorrect_answer = 0;
@@ -55,7 +58,7 @@ check.addEventListener("click", function() {
             input.value = "";
             warning.innerHTML = "";
             warning.style.color = "red";
-        }, 1000);
+        }, 2000);
     } else {
         if(input.value == "") {
             warning.innerHTML = "Введите ответ";
@@ -69,8 +72,8 @@ check.addEventListener("click", function() {
 next.addEventListener("click", function() {
     if(confirm("Вы уверены?")) {
         count++;
-        EndTest();
         incorrect_answer++;
+        EndTest();
         img.src = `./img/${count}.jpg`;
         input.value = "";
         warning.innerHTML = " ";
@@ -88,6 +91,8 @@ input.addEventListener("focus", function() {
 
 function EndTest() {
     if(count > Object.keys(questions).length) {
+        rightAnswer.innerHTML = correct_answer;
+        incorrectAnswer.innerHTML = incorrect_answer;
         main.style.display = "none";
         footer.style.display = "flex";
     }
