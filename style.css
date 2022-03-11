@@ -34,9 +34,17 @@ body{
     max-width: 500px;
     text-align: center;
     font-size: 30px;
+    margin-bottom: 30px;
+}
+.main__form__question {
+    background-color:floralwhite;
+    border-radius: 30px;
+    padding: 5px;
+    margin: 20px 15px 0px 15px;
 }
 input {
     border-radius: 5px;
+    margin-top: 20px;
     padding: 10px;
     text-align: center;
     border: 1px solid black;
@@ -56,7 +64,12 @@ input:focus {
     background-color: brown;
 }
 .main__form__warning {
+    display: none;
     color: red;
+    background-color: beige;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 10px 15px;
 }
 
 .footer {
@@ -70,6 +83,7 @@ input:focus {
 }
 .main img{
     border: 2px solid black;
+    width: 600px;
 }
 .footer img, .header img{
     border: 2px solid black;
